@@ -1,4 +1,4 @@
-# Cancelling operations blocks in an OperationQueue
+# How to cancel operations blocks in an OperationQueue
 
 ## Main
 ```
