@@ -7,8 +7,8 @@ fakeObject.start()
 fakeObject.exitAndCancelOperations()
 ```
 
-## fakeObject.start()
-### 1. Creates 3 operation blocks
+## 1. fakeObject.start()
+### 1.1. Creates 3 operation blocks
 #### Operation 1 calls `checkFacebook()`
 ```
 let operationBlock1 = BlockOperation()
@@ -55,14 +55,14 @@ operationBlock3.addExecutionBlock { [unowned operationBlock3] in
   self.drinkCoffee()
 }
 ```
-### 2. Adds the 3 operation blocks to the operationQueue (underlying queue is a background serial queue)
+### 1.2. Adds the 3 operation blocks to the operationQueue (underlying queue is a background serial queue)
 ```
 operationQueue.addOperation(operationBlock1) //checkFacebook
 operationQueue.addOperation(operationBlock2) //exercise
 operationQueue.addOperation(operationBlock3) //coffee
 ```
 
-## fakeObject.exitAndCancelOperations()
+## 2. fakeObject.exitAndCancelOperations()
 #### Calls `operationQueue.cancelAllOperations()`
 ```
 func exitAndCancelOperations(in operationQueue: OperationQueue) {
