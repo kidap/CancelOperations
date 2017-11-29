@@ -33,7 +33,7 @@ class FakeClass {
 		let operationBlock2 = BlockOperation()
 		operationBlock2.addExecutionBlock {[unowned operationBlock2] in
 			guard !operationBlock2.isCancelled else {
-				print("Operation 2 (exercise): Cancelled before asyncFetch even starts")
+				print("Operation 2 (exercise): Cancelled before startExecise even starts")
 				return
 			}
 			
